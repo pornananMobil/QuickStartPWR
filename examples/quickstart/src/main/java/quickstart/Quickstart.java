@@ -15,6 +15,7 @@
  */
 package quickstart;
 
+import com.okta.sdk.authc.credentials.TokenClientCredentials;
 import com.okta.sdk.client.Client;
 import com.okta.sdk.client.ClientBuilder;
 import com.okta.sdk.client.Clients;
@@ -28,6 +29,7 @@ import com.okta.sdk.resource.user.UserList;
 import com.okta.sdk.resource.user.UserStatus;
 
 import java.util.UUID;
+import java.util.Scanner;
 
 /**
  * This class demonstrates the code found in the Okta Java SDK QuickStart Guide
@@ -50,11 +52,14 @@ public class Quickstart {
 
         try {
             // Instantiate a builder for your Client. If needed, settings like Proxy and Caching can be defined here.
-            builder = Clients.builder();
+            builder = Clients.builder()
+                .setOrgUrl("https://xom-poc.okta.com")  // e.g. https://dev-123456.okta.com
+                .setClientCredentials(new TokenClientCredentials("00Bgd232898fpWTQlOp2HSjNntkjA0OzxGkGUQKR2e"));
 
             // No need to define anything else; build the Client instance. The ClientCredential information will be automatically found
             // in pre-defined locations: i.e. ~/.okta/okta.yaml
             client = builder.build();
+
 
             // Create a group
             group = GroupBuilder.instance()

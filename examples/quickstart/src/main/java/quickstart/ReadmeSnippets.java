@@ -62,8 +62,8 @@ public class ReadmeSnippets {
 
     private void createClient() {
         Client client = Clients.builder()
-            .setOrgUrl("https://{yourOktaDomain}")  // e.g. https://dev-123456.okta.com
-            .setClientCredentials(new TokenClientCredentials("{apiToken}"))
+            .setOrgUrl("https://xom-poc.okta.com")  // e.g. https://dev-123456.okta.com
+            .setClientCredentials(new TokenClientCredentials("00Tai1kb4oeORVP5g5d6"))
             .build();
     }
 
@@ -73,7 +73,7 @@ public class ReadmeSnippets {
 
     private void createOAuth2Client() {
         Client client = Clients.builder()
-            .setOrgUrl("https://{yourOktaDomain}")  // e.g. https://dev-123456.okta.com
+            .setOrgUrl("https://xom-poc.okta.com")  // e.g. https://dev-123456.okta.com
             .setAuthorizationMode(AuthorizationMode.PRIVATE_KEY)
             .setClientId("{clientId}")
             .setKid("{kid}") // key id (optional)
