@@ -1,0 +1,13 @@
+okta:
+  client:
+    connectionTimeout: 30 # seconds
+    orgUrl: "https://xom-poc.okta.com" # i.e. https://dev-123456.okta.com
+    proxy:
+      port: null
+      host: null
+      username: null
+      password: null
+    token: 00Tai1kb4oeORVP5g5d6
+    requestTimeout: 0 # seconds
+    rateLimit:
+      maxRetries: 4
